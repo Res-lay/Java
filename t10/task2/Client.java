@@ -1,6 +1,6 @@
 package t10.task2;
 
-import task2.Chair;
+
 
 public class Client {
     Chair chair;
