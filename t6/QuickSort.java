@@ -1,6 +1,7 @@
 package t6;
 
 import java.util.Comparator;
+import java.util.Arrays;
 
 public abstract class QuickSort<T>{
     Comparator<Student> comp = new Comparator<Student>() {
@@ -17,43 +18,8 @@ public abstract class QuickSort<T>{
             }
         }
     };
-    public void quickSort(Student[] array, int L, int R){
+    public static void quickSort(Student[] array){
 
-        if(L >= R){
-            return;
-        }
-
-        if(array.length == 0){
-            return;
-        }
-
-        int B = L + (R - L) / 2;
-        int l = L;
-        int r = R;
-        Student temp;
-
-        while(l <= r){
-            while(comp.compare(array[r], array[B]) == 1){
-                r--;
-            }
-            while(comp.compare(array[l], array[B]) == -1){
-                l++;
-            }
-
-            if(L <= r) {
-                temp = array[r];
-                array[r] = array[l];
-                array[l] = temp;
-                l++;
-                r--;
-            }
-            if (L < r){
-                quickSort(array,L,r);
-            }
-
-            if(R > l){
-                quickSort(array,l,R);
-            }
-        }
+        Arrays.sort(array, Comparator.reverseOrder());
     }
 }

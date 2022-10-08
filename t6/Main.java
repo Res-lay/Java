@@ -2,7 +2,7 @@ package t6;
 
 import java.lang.reflect.Array;
 
-public class Main extends  InsertionSort{
+public class Main extends  QuickSort{
     public static void main(String[] args) {
         Student[] iDNumber = new Student[5];
         iDNumber[0] = new Student("Alex", 100, 1);
@@ -10,7 +10,7 @@ public class Main extends  InsertionSort{
         iDNumber[2] = new Student("Olga", 34, 4);
         iDNumber[3] = new Student("Maria", 120, 5);
         iDNumber[4] = new Student("Amber", 0, 3);
-        insertionSort(iDNumber);
+        quickSort(iDNumber);
         for (Student student : iDNumber) {
             System.out.println(student);
         }
