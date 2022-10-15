@@ -1,4 +1,4 @@
-package t1215.Ex3;
+package t12_15.Ex3;
 
 public class Main {
     public static void main(String[] args) {

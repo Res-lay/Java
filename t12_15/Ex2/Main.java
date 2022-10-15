@@ -1,4 +1,4 @@
-package t1215.Ex2;
+package t12_15.Ex2;
 
 import java.util.Scanner;
 
